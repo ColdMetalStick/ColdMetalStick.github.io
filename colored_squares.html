@@ -1,0 +1,165 @@
+<!-- An animation allows an element to gradually change from one style to another.
+you can change as many CSS properties as you want, as many times at your discretion. 
+to use CSS anims, you first specify the keyframes for the animation. Keyframes hold what
+styles the element at certain times. 
+
+the @keyframes rule. 
+when you specify CSS styles inside the @keyframes rule, the animation will gradually change from 
+the current style to the new style at specified times. 
+
+To get an animation to work, you must bind the animation to an element.
+
+In this example, the "eg" animation is binded to the <div> element. The element lasts for 4 seconds,
+and gradually changes the background color of the <div> element from "red" to "yellow" -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.basic-example {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: basic-example;
+                animation-duration: 3s;
+            }
+            @keyframes basic-example {
+                from {
+                    background-color: red;
+                }
+                to {
+                    background-color: yellow;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class='basic-example'></div>
+    </body>
+</html>
+
+<!-- You can also use percentages. So for this example under, the color will change when animation is 25%
+complete, 50% complete etc... -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.percentage-example {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                animation-name: percentage-example;
+                animation-duration: 5s;
+            }
+            @keyframes percentage-example {
+                0% {background-color:blue;}
+                25% {background-color: rgb(117, 34, 117);}
+                50% {background-color: purple}
+                100% {background-color: white;}
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <div class='percentage-example'></div>
+    </body>
+</html>
+
+<!-- This example changes color and positioning of the shape, moving it around. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.change-pos-example {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: change-pos-example;
+                animation-duration: 4s;
+            }
+            @keyframes change-pos-example {
+                0%, 100% {background-color: red; left:0px; top:0px;}
+                25% {background-color: yellow; left:200px; top:0px;}
+                50% {background-color:maroon; left: 200px; top: 200px;}
+                75% {background-color: yellow; left: 0px; top: 200px;}
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <div class='change-pos-example'></div>
+    </body>
+</html>
+
+<!-- animation-delay property specifies a delay for the start of animation. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.delayed-anim {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: blue;
+                animation-name: delayed-anim;
+                animation-duration: 3s;
+                animation-delay: 1.5s;
+            }
+            @keyframes delayed-anim {
+                0%, 100% {background-color: blue; left:0px; top:0px;}
+                25% {background-color: purple; left:200px; top:0px;}
+                50% {background-color:black; left: 200px; top: 200px;}
+                75% {background-color: white; left: 0px; top: 200px;}
+            }
+            /* You can also use negative time values for delay. It means animation will start as if
+            its already been playing at -n seconds. */
+            div.delayed-anim-negative {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: blue;
+                animation-name: delayed-anim;
+                animation-duration: 3s;
+                animation-delay: -0.5s;
+            }
+            @keyframes delayed-anim-negative {
+                0%, 100% {background-color: blue; left:0px; top:0px;}
+                25% {background-color: purple; left:200px; top:0px;}
+                50% {background-color:black; left: 200px; top: 200px;}
+                75% {background-color: white; left: 0px; top: 200px;}
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <div class='delayed-anim'></div>
+        <br>
+        <div class='delayed-anim-negative'></div>
+    </body>
+</html>
+
+<!-- animation-iteration-count property specifies how many times the animation will run.
+this example runs infinitely -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.iterated-example {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: iterated-example;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes iterated-example {
+                0%, 100% {background-color: blue; left:0px; top:0px;}
+                25% {background-color: purple; left:200px; top:0px;}
+                50% {background-color:black; left: 200px; top: 200px;}
+                75% {background-color: white; left: 0px; top: 200px;}
+            }
+        </style>
+    </head>
+    <div class='iterated-example'></div>
+</html>
