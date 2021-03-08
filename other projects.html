@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Simplistic Website</title>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <style>
+            * {
+                box-sizing: border-box;
+                color: rgb(182, 182, 182); 
+            }
+            body {
+                font-family: helvetica;
+                margin: 0;
+                background-color: #1b1c1e;
+            }
+            .header {
+                padding: 60px;
+                text-align: center;
+                background: #5d5d5d;
+            }
+            .navbar {
+                display: flex;
+                background-color: #252525;
+            }
+            .navbar a{
+                padding: 14px 20px;
+                text-decoration: none;
+                text-align: center;
+
+            }
+            .navbar a:hover {
+                background-color: rgb(170, 167, 167);
+                color:black;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main {
+                flex: 100%;
+                background-color: #1b1c1e;
+                padding: 20px;
+            }
+            .contentbox {
+                background-color: #23272a;
+                width: 100%;
+                padding: 20px;
+            }
+            .footer {
+                padding: 20px;
+                text-align: center;
+                background: #5d5d5d;
+            }
+            @media screen and (max-width: 700px) {
+                .row, .navbar {
+                    flex-direction: column;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class='header'>
+            <h1>A Simplistic Website</h1>
+        </div>
+
+        <div class='navbar'>
+            <a href='index.html'>Home</a>
+            <a href='other projects.html'>Other Projects</a>
+        </div>
+
+        <div class='row'>
+            <div class='main'>
+                <h3>Also love to:</h3>
+                <div class='contentbox' style='height: 60px;'><a href='colored_squares.html'>Colored Squares CSS animation</a></div><br>
+                <div class='contentbox' style='height: 60px;'><a href='responsiveimgrid.html'>Responsive Image Grid</a></div><br>
+                <div class='contentbox' style='height: 60px;'><a href='gridview.html'>Grid View Website</a></div>
+            </div>
+    </div>
+    <div class='footer'>
+        <h2></h2>
+    </div>
+    </body>
+</html>
