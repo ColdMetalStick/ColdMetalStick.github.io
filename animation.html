@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Favicon code -->
+       <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+       <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+       <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+       <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+       <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+       <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+       <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+       <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+       <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+       <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+       <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+       <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+       <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+       <link rel="manifest" href="/manifest.json">
+       <meta name="msapplication-TileColor" content="#ffffff">
+       <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+       <meta name="theme-color" content="#ffffff">
+        
+        <title>Animation</title>
+        <meta charset='utf-8'>
+        <meta lang='en-US'>
+        <style>
+
+            div.basic-animation {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: basic-animation;
+                animation-duration: 3s;
+            }
+            @keyframes basic-animation {
+                from {
+                    background-color: red;
+                }
+                to {
+                    background-color: yellow;
+                }
+            }
+
+            div.percentage-animation {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                animation-name: percentage-animation;
+                animation-duration: 5s;
+            }
+            @keyframes percentage-animation {
+                0% {background-color:blue;}
+                25% {background-color: rgb(117, 34, 117);}
+                50% {background-color: purple}
+                100% {background-color: white;}
+            }
+
+            div.change-pos-animation {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: change-pos-animation;
+                animation-duration: 4s;
+            }
+            @keyframes change-pos-animation {
+                0%, 100% {background-color: red; left:0px; top:0px;}
+                25% {background-color: yellow; left:200px; top:0px;}
+                50% {background-color:maroon; left: 200px; top: 200px;}
+                75% {background-color: yellow; left: 0px; top: 200px;}
+            }
+
+            div.delayed-anim {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: blue;
+                animation-name: delayed-anim;
+                animation-duration: 3s;
+                animation-delay: 1.5s;
+            }
+            @keyframes delayed-anim {
+                0%, 100% {background-color: blue; left:0px; top:0px;}
+                25% {background-color: purple; left:200px; top:0px;}
+                50% {background-color:black; left: 200px; top: 200px;}
+                75% {background-color: white; left: 0px; top: 200px;}
+            }
+            /* You can also use negative time values for delay. It means animation will start as if
+            its already been playing at -n seconds. */
+            div.delayed-anim-negative {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: blue;
+                animation-name: delayed-anim;
+                animation-duration: 3s;
+                animation-delay: -0.5s;
+            }
+            @keyframes delayed-anim-negative {
+                0%, 100% {background-color: blue; left:0px; top:0px;}
+                25% {background-color: purple; left:200px; top:0px;}
+                50% {background-color:black; left: 200px; top: 200px;}
+                75% {background-color: white; left: 0px; top: 200px;}
+            }
+
+            div.inf-animation {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: inf-animation;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes inf-animation {
+                0%, 100% {background-color: blue; left:0px; top:0px;}
+                25% {background-color: purple; left:200px; top:0px;}
+                50% {background-color:black; left: 200px; top: 200px;}
+                75% {background-color: white; left: 0px; top: 200px;}
+            }
+
+            .blue-properties {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: blue;
+                animation-name: reverse;
+                animation-duration: 4s;
+            }
+            #reverse {
+                animation-direction: reverse;
+            }
+            #alternate {
+                animation-direction: alternate;
+            }
+            #alternate-reverse {
+                animation-direction: alternate-reverse;
+            }
+            @keyframes reverse {
+                0%, 100% {background-color: white; left:0px; top:0px;}
+                25% {background-color: grey; left:200px; top:0px;}
+                50% {background-color:rgb(66, 57, 57); left: 200px; top: 200px;}
+                75% {background-color: black; left: 0px; top: 200px;}
+            }
+
+            .green-properties {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: green;
+                animation-name: anim;
+                animation-duration: 4s;
+            }
+            #ease {
+                animation-timing-function: ease;
+            }
+            #linear {
+                animation-timing-function: linear;
+            }
+            #ease-in {
+                animation-timing-function: ease-in;
+            }
+            #ease-out {
+                animation-timing-function: ease-out;
+            }
+            #ease-in-out {
+                animation-timing-function: ease-in-out;
+            }
+            #cubic-bezier {
+                animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+            @keyframes anim {
+                0%, 100% {background-color: green; left:0px; top:0px;}
+                25% {background-color: greenyellow; left:200px; top:0px;}
+                50% {background-color:rgb(119, 151, 119); left: 200px; top: 200px;}
+                75% {background-color: white; left: 0px; top: 200px;}
+            }
+
+            .pink-properties {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: pink;
+                animation-name: fill-modes;
+                animation-duration: 4s;
+            }
+            #forwards {
+                animation-fill-mode: forwards;
+            }
+            #backwards {
+                animation-fill-mode: backwards;
+            }
+            #both {
+                animation-fill-mode: both;
+            }
+            @keyframes fill-modes {
+                0%{background-color: pink; left:0px; top:0px;}
+                25% {background-color: violet; left:200px; top:0px;}
+                50% {background-color:blue(173, 28, 173); left: 200px; top: 200px;}
+                75% {background-color: red; left: 0px; top: 200px;}
+                100% {background-color: black; left: 0px; top: 0px;}
+            }
+
+            div.shorthand {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: pink;
+                animation: shorthand 5s linear 1s infinite alternate-reverse;
+            }
+            @keyframes shorthand {
+                0%{background-color: pink; left:0px; top:0px;}
+                25% {background-color: violet; left:200px; top:0px;}
+                50% {background-color:blue(173, 28, 173); left: 200px; top: 200px;}
+                75% {background-color: red; left: 0px; top: 200px;}
+                100% {background-color: black; left: 0px; top: 0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class='basic-animation'></div>
+        <div class='percentage-animation'></div>
+        <div class='change-pos-animation'></div>
+        <div class='delayed-anim'></div><br>
+        <div class='delayed-anim-negative'></div>
+        <div class='inf-animation'></div>
+        <div class='blue-properties' id='reverse'></div><br>
+        <div class='blue-properties' style='background-color: rgb(217, 255, 0)' id='alternate'></div><br>
+        <div class='blue-properties' id='alternate-reverse'></div><br>
+        <div class='green-properties' id='ease'></div><br>
+        <div class='green-properties' id='linear'></div><br>
+        <div class='green-properties' id='ease-in'></div><br>
+        <div class='green-properties' id='ease-in-out'></div><br>
+        <div class='green-properties' id='cubic-bezier'></div><br>
+        <div class='pink-properties' id='forwards'></div><br>
+        <div class='pink-properties' id='backwards'></div><br>
+        <div class='pink-properties' id='both'></div>
+        <div class='shorthand'></div>
+    </body>
+</html>

@@ -1,0 +1,162 @@
+<!-- Responsive web design makes web page look good on all devices, using only html n' css. This complete example will be later explained, it's just to demonstrate what is achieveable. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Favicon code -->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <title>Grid View Website</title>
+        <meta charset='utf-8'>
+        <meta lang='en-US'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                background-image: url('mt.png');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            [class*='col-'] {
+                float: left;
+                padding: 15px;
+            }
+            html {
+                font-family: helvetica;
+            }
+            .header {
+                background-color: rgb(174, 178, 189);
+                color: #ffffff;
+                padding: 15px;
+            }
+            .menu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .menu li {
+                padding: 8px;
+                margin-bottom: 7px;
+                background-color: #33b5e5;
+                color: #ffffff;
+                box-shadow: 0 1px 3px rgb(0,0,0,0.12), 0 1px 2px rgb(0,0,0,0.24);
+            }
+            .menu li:hover {
+                background-color: #0099cc;
+            }
+            .aside {
+                background-color: #33b5e5;
+                padding: 15px;
+                color: #ffffff;
+                text-align: center;
+                font-size: 14px;
+                box-shadow: 0 1px 3px rgb(0,0,0,0.12), 0 1px 2px rgb(0,0,0,0.24);
+            }
+            .footer {
+                background-color: #0099cc;
+                color: #ffffff;
+                text-align: center;
+                font-size: 12px;
+                padding: 15px;
+            }
+            @media only screen and (min-width: 600px) {
+                .col-s-1 {width: 8.33%;}
+                .col-s-2 {width: 16.66;}
+                .col-s-3 {width: 25%;}
+                .col-s-4 {width: 33.33%;}
+                .col-s-5 {width: 41.66%;}
+                .col-s-6 {width: 50%;}
+                .col-s-7 {width: 58.33%;}
+                .col-s-8 {width: 66.66%;}
+                .col-s-9 {width: 75%;}
+                .col-s-10 {width: 83.33%;}
+                .col-s-11 {width: 91.66%;}
+                .col-s-12 {width: 100%;}
+            }
+            @media only screen and (min-width: 760px) {
+                .col-1 {width: 8.33%;}
+                .col-2 {width: 16.66%;}
+                .col-3 {width: 25%;}
+                .col-4 {width: 33.33%;}
+                .col-5 {width: 41.66%;}
+                .col-6 {width: 50%;}
+                .col-7 {width: 58.33%;}
+                .col-8 {width: 66.66%;}
+                .col-9 {width: 75%;}
+                .col-10 {width: 83.33%;}
+                .col-11 {width: 91.66%;}
+                .col-12 {width: 100%;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class='header' style='text-align: center;'>
+            <h1>microTech</h1>
+        </div>
+
+        <div class='row'>
+            <div class='col-3 col-s-3 menu'>
+                <ul>
+                    <li>Flights</li>
+                    <li>Cities</li>
+                    <li>OTher stuff..</li>
+                </ul>
+            </div>
+            
+            <div class='col-6 col-s-9'>
+                <h1>New Babbage</h1>
+                <p>Stuff about crappy FPS, lag, desync, tram traps etc..</p>
+            </div>
+
+            <div class='col-3 col-s-12'>
+                <div class='aside'>
+                    <h2>Wat</h2>
+                    <p>Stuff about mT</p>
+                    <h2>WHy</h2>
+                    <p>More stuff about mT</p>
+                </div>
+            </div>
+
+            <div class='col-3 col-s-12'>
+                <div class='aside'>
+                    <h2>More info</h2>
+                    <p>Cold place</p>
+                    <h2>More info</h2>
+                    <p>Very cold place</p>
+                </div>
+            </div>
+
+            <div style='float: right;' class='col-3 col-s-12'>
+                <div class='aside'>
+                    <h2>More info</h2>
+                    <p>...</p>
+                    <h2>More info</h2>
+                    <p>...</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
